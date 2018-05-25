@@ -1,0 +1,61 @@
+b = bosluk
+o = kullanıcı
+x = bilgisayar
+
+							obb
+							bbb
+							bbb
+
+					d1 m1	oxb
+						bbb
+						bbb
+						(1)
+				d2 m2	oxo
+					bbb
+					bbb
+					(2)
+			d3 m3	oxo
+				xbb
+				bbb
+				(3)
+		d4 m4	oxo
+			xob
+			bbb
+			(4)
+	d5 m5	oxo		oxo
+		xox		xob
+		bbb		xbb
+		(5)		(13)
+
+d6 m6	oxo	oxo	oxo
+	xox	xox	xox
+	obb	bob	bbo
+	(6)	(7)	(12)
+
+d7	     oxo   oxo
+	     xox   xox
+	     xob   box
+	     (8)   (10)
+	 oxo           oxo 
+	 xox	       xox
+	 xoo           oox
+	 (9)           (11)
+	
+	
+	
+	
+	her node;
+		bir üst derinlikte kendinden küçük olan en büyük node ile bağlı
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	  
+	     
+	     

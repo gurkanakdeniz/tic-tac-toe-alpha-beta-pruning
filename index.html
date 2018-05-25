@@ -1,0 +1,118 @@
+<html>
+
+  <head>
+    <title>Tic-Tac-Toe Alpha Beta Pruning</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <script src="js/cytoscape.js"></script>
+    <script src="js/dagre-custom.js"></script>
+    <script src="js/cytoscape-dagre.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/simplebar.js"></script>
+    <script src="js/main.js"></script>
+
+    <link rel="stylesheet" href="css/simplebar.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+
+
+  <body onload="NewGame();">
+
+    <div class=" float-right">
+      <div class="row float-right">
+        <div class="col-md-2 text-center">
+          Ağaç Derinlik
+        </div>
+
+        <div class="col-md-6">
+          <select class="form-control" id="derinlikId">
+            <option value="2">2 - derinlik göster</option>
+            <option value="3">3 - derinlik göster</option>
+            <option value="4">4 - derinlik göster</option>
+            <option value="5">5 - derinlik göster</option>
+            <option value="6">6 - derinlik göster</option>
+            <option value="7">7 - derinlik göster</option>
+            <option value="8">8 - derinlik göster</option>
+          </select>
+        <br/>
+          <div class="">
+            <div class="checkbox">
+              <label><input id="agacGosterCheck" type="checkbox" value="" checked="True"> Agaç Goster</label>
+            </div>   
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <button type="button" class="btn btn-danger" value="Yeni Oyun" onclick="NewGame()"> Yeni Oyun</button> 
+        <br/>
+        <br/>
+        <div class="checkbox">
+            <label><input id="hamleGosterCheck" type="checkbox" value="" checked="True"> Hamle Goster</label>
+          </div> 
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="main-game-div" >
+          <div class="main-game-div-content" >
+            <h1>Tic Tac Toe</h1>
+
+            <img src="images/blank.png" onclick="MakeMove(0)" class="game-board-box" style="left:10 !important; top:50 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(1)" class="game-board-box" style="left:110 !important; top:50 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(2)" class="game-board-box" style="left:210 !important; top:50 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(3)" class="game-board-box" style="left:10 !important; top:150 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(4)" class="game-board-box" style="left:110 !important; top:150 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(5)" class="game-board-box" style="left:210 !important; top:150 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(6)" class="game-board-box" style="left:10 !important; top:250 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(7)" class="game-board-box" style="left:110 !important; top:250 !important;" />
+            <img src="images/blank.png" onclick="MakeMove(8)" class="game-board-box" style="left:210 !important; top:250 !important;" />
+            <img src="images/board.png" id="gameBoard" class="game-board" />  
+
+
+            <p id="turnInfo" class="turn-info-content" > Senin Sıran! </p>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="result-content">
+
+          <div class="row">
+            <div class="col-sm-4 text-orange">
+              <strong>Hareketin Bulunma Süresi : </strong>
+            </div>
+            <div class="col-sm-8 text-grey">
+              <div id="searchTime"></div> 
+            </div>
+            
+          </div>
+            <br/>
+            <div>
+              
+            </div>
+            <h1> ~ Hamleler ~ </h1>
+          <div id="movesId" class="row moves-content" data-simplebar>
+            
+            <div class="col-md-6" id="hamleGoruntu"></div>
+            <div class="col-md-6" id="hamleGoruntu2"></div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="cy"></div> 
+    </div>
+  <script type="text/javascript">
+    $( document ).ready(function() {
+      $(".simplebar-content").addClass("row");
+    });
+  </script>
+  </body>
+</html>
